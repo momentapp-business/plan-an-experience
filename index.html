@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Fundamoment Experience Planner</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Fundamoment Experience Planner</h1>
+        <div id="step1" class="step">
+            <h2>Step 1: Planning</h2>
+            <form id="planningForm">
+                <label for="experience">Experience:</label><br>
+                <input type="text" id="experience" name="experience" required><br>
+                <label for="date">Date:</label><br>
+                <input type="date" id="date" name="date" required><br>
+                <label for="duration">Duration:</label><br>
+                <input type="text" id="duration" name="duration" required><br>
+                <label for="location">Location:</label><br>
+                <input type="text" id="location" name="location" required><br>
+                <label for="participants">Number of Participants:</label><br>
+                <input type="number" id="participants" name="participants" min="1" required><br>
+                <label for="itinerary">Itinerary:</label><br>
+                <textarea id="itinerary" name="itinerary" required></textarea><br>
+                <input type="button" value="Next" onclick="savePlanning()">
+            </form>
+        </div>
+        <div id="step2" class="step">
+            <h2>Step 2: Budgeting</h2>
+            <form id="budgetingForm">
+                <label for="budget">Budget:</label><br>
+                <input type="number" id="budget" name="budget" min="0" required><br>
+                <label for="funding">Funding Needed:</label><br>
+                <input type="number" id="funding" name="funding" min="0" required><br>
+                <input type="button" value="Next" onclick="saveBudgeting()">
+            </form>
+        </div>
+        <div id="step3" class="step">
+            <h2>Step 3: Execution</h2>
+            <form id="executionForm">
+                <label for="checklist">Checklist:</label><br>
+                <textarea id="checklist" name="checklist" required></textarea><br>
+                <input type="button" value="Submit" onclick="saveExecution()">
+            </form>
+        </div>
+        <div id="summary" class="step">
+            <h2>Summary</h2>
+            <!-- Summary will be displayed here -->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
